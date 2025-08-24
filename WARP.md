@@ -36,6 +36,16 @@ python3 -m http.server 8000
 npx serve .
 ```
 
+### Railway Deployment
+```bash
+# Deploy to Railway (requires Railway CLI)
+railway login
+railway deploy
+# or link to existing Railway project
+railway link [project-id]
+railway deploy
+```
+
 ### Development Workflow
 - Make changes to files in `web/` directory
 - Refresh browser to see changes (no build step required)

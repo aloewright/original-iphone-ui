@@ -21,8 +21,8 @@ def main():
     # Change to the web directory
     os.chdir(web_dir)
     
-    # Set up the server
-    PORT = 8000
+    # Set up the server - use Railway PORT environment variable if available
+    PORT = int(os.environ.get('PORT', 8000))
     Handler = http.server.SimpleHTTPRequestHandler
     
     print(f"🍎 Starting Original iPhone UI Server...")
