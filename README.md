@@ -42,6 +42,14 @@ python3 -m http.server 8000
 npx serve .
 ```
 
+## 🚀 Railway Deployment
+
+This project is ready to deploy to Railway with one click:
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/aloewright/original-iphone-ui)
+
+For detailed deployment instructions, see [RAILWAY.md](RAILWAY.md).
+
 ## 📁 Project Structure
 
 ```
