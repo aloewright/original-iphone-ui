@@ -1,0 +1,547 @@
+/* ========================================
+   ORIGINAL IPHONE UI - APP SCREENS
+   ======================================== */
+
+/* App Screen Container */
+.app-screen {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    overflow: hidden;
+}
+
+/* App Container */
+.app-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #f0f0f0;
+    position: relative;
+}
+
+/* App Header */
+.app-header {
+    height: 44px;
+    background: linear-gradient(to bottom, #b8b8b8, #8a8a8a);
+    border-bottom: 1px solid #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.app-title {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Back Button (for navigation) */
+.back-button {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(to bottom, #4a90e2, #357abd);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.back-button:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+/* App Content */
+.app-content {
+    flex: 1;
+    background: #f0f0f0;
+    overflow-y: auto;
+    position: relative;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #666;
+}
+
+.spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #ddd;
+    border-top: 3px solid #4a90e2;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ========================================
+   MESSAGES APP
+   ======================================== */
+
+.messages-app .app-content {
+    background: #e5ddd5;
+    background-image: 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 20px,
+            rgba(255,255,255,0.03) 20px,
+            rgba(255,255,255,0.03) 40px
+        );
+}
+
+.messages-list {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message-bubble {
+    max-width: 75%;
+    padding: 8px 12px;
+    border-radius: 18px;
+    font-size: 14px;
+    line-height: 1.4;
+    position: relative;
+}
+
+.message-bubble.sent {
+    background: #007aff;
+    color: white;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.message-bubble.received {
+    background: white;
+    color: black;
+    align-self: flex-start;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.message-time {
+    font-size: 10px;
+    opacity: 0.6;
+    text-align: center;
+    margin: 5px 0;
+}
+
+/* ========================================
+   PHONE APP
+   ======================================== */
+
+.phone-app .app-content {
+    background: #000;
+    color: white;
+}
+
+.phone-tabs {
+    display: flex;
+    background: #2c2c2c;
+    border-bottom: 1px solid #444;
+}
+
+.phone-tab {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+    border-right: 1px solid #444;
+    cursor: pointer;
+}
+
+.phone-tab.active {
+    color: #007aff;
+    background: #1a1a1a;
+}
+
+.phone-tab:last-child {
+    border-right: none;
+}
+
+.dialer-pad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 30px;
+    justify-items: center;
+}
+
+.dial-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #333;
+    color: white;
+    border: none;
+    font-size: 24px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dial-button:active {
+    background: #555;
+    transform: scale(0.95);
+}
+
+.dial-display {
+    text-align: center;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: 300;
+    min-height: 40px;
+    color: white;
+}
+
+/* ========================================
+   CALENDAR APP
+   ======================================== */
+
+.calendar-app .app-content {
+    background: #f0f0f0;
+}
+
+.calendar-header {
+    background: linear-gradient(to bottom, #d5d5d5, #c0c0c0);
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #999;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: white;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+
+.calendar-day:hover {
+    background: #f0f8ff;
+}
+
+.calendar-day.today {
+    background: #007aff;
+    color: white;
+    font-weight: bold;
+}
+
+.calendar-day.other-month {
+    color: #ccc;
+}
+
+/* ========================================
+   PHOTOS APP
+   ======================================== */
+
+.photos-app .app-content {
+    background: #000;
+}
+
+.photos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    padding: 2px;
+}
+
+.photo-thumbnail {
+    aspect-ratio: 1;
+    background: #333;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.photo-thumbnail:active {
+    transform: scale(0.95);
+}
+
+/* ========================================
+   SETTINGS APP
+   ======================================== */
+
+.settings-app .app-content {
+    background: #f0f0f0;
+}
+
+.settings-section {
+    margin: 20px 0;
+}
+
+.settings-group {
+    background: white;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.settings-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    cursor: pointer;
+}
+
+.settings-item:last-child {
+    border-bottom: none;
+}
+
+.settings-item:active {
+    background: #ddd;
+}
+
+.settings-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: white;
+}
+
+.settings-chevron {
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* ========================================
+   SAFARI APP
+   ======================================== */
+
+.safari-app .app-content {
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+}
+
+.safari-toolbar {
+    background: linear-gradient(to bottom, #e8e8e8, #d0d0d0);
+    border-bottom: 1px solid #999;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.safari-url-bar {
+    flex: 1;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 14px;
+}
+
+.safari-button {
+    background: linear-gradient(to bottom, #f0f0f0, #d0d0d0);
+    border: 1px solid #999;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.safari-content {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* ========================================
+   NOTES APP
+   ======================================== */
+
+.notes-app .app-content {
+    background: #f4f4f4;
+}
+
+.notes-list {
+    background: white;
+}
+
+.note-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.note-item:active {
+    background: #f0f0f0;
+}
+
+.note-title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.note-preview {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.note-date {
+    font-size: 12px;
+    color: #999;
+    margin-top: 4px;
+}
+
+/* ========================================
+   MUSIC APP
+   ======================================== */
+
+.music-app .app-content {
+    background: linear-gradient(to bottom, #2c2c2c, #1a1a1a);
+    color: white;
+}
+
+.music-tabs {
+    display: flex;
+    background: #333;
+    border-bottom: 1px solid #555;
+}
+
+.music-tab {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.music-tab.active {
+    color: white;
+    background: #444;
+}
+
+.now-playing {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.album-art {
+    width: 200px;
+    height: 200px;
+    background: #555;
+    border-radius: 8px;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.track-info {
+    margin-bottom: 20px;
+}
+
+.track-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.artist-name {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.music-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.control-button {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #555;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.control-button.play {
+    width: 60px;
+    height: 60px;
+    background: white;
+    color: #333;
+    font-size: 24px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 400px) {
+    .app-title {
+        font-size: 16px;
+    }
+    
+    .message-bubble {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+    
+    .dial-button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .dialer-pad {
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .album-art {
+        width: 150px;
+        height: 150px;
+    }
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Original iPhone UI</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/phone-frame.css">
+    <link rel="stylesheet" href="css/home-screen.css">
+    <link rel="stylesheet" href="css/apps.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📱</text></svg>">
+</head>
+<body>
+    <div class="phone-container">
+        <!-- iPhone Frame -->
+        <div class="phone-frame">
+            <!-- Phone Body -->
+            <div class="phone-body">
+                <!-- Physical Elements -->
+                <div class="speaker"></div>
+                <div class="camera"></div>
+                <div class="power-button"></div>
+                <div class="volume-buttons">
+                    <div class="volume-up"></div>
+                    <div class="volume-down"></div>
+                </div>
+                <div class="mute-switch"></div>
+                
+                <!-- Screen -->
+                <div class="screen">
+                    <!-- Status Bar -->
+                    <div class="status-bar">
+                        <div class="status-left">
+                            <span class="carrier">AT&T</span>
+                            <div class="signal-bars">
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <div class="wifi-icon">📶</div>
+                        </div>
+                        <div class="status-center">
+                            <span class="time" id="current-time">8:06 PM</span>
+                        </div>
+                        <div class="status-right">
+                            <div class="battery">
+                                <div class="battery-level"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Main Content Area -->
+                    <div class="content" id="main-content">
+                        <!-- Home Screen -->
+                        <div class="home-screen" id="home-screen">
+                            <!-- Wallpaper -->
+                            <div class="wallpaper"></div>
+                            
+                            <!-- App Grid -->
+                            <div class="app-grid">
+                                <!-- Row 1 -->
+                                <div class="app-row">
+                                    <div class="app-icon" data-app="messages">
+                                        <div class="icon messages-icon"></div>
+                                        <span class="app-label">Messages</span>
+                                    </div>
+                                    <div class="app-icon" data-app="calendar">
+                                        <div class="icon calendar-icon"></div>
+                                        <span class="app-label">Calendar</span>
+                                    </div>
+                                    <div class="app-icon" data-app="photos">
+                                        <div class="icon photos-icon"></div>
+                                        <span class="app-label">Photos</span>
+                                    </div>
+                                    <div class="app-icon" data-app="camera">
+                                        <div class="icon camera-icon"></div>
+                                        <span class="app-label">Camera</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Row 2 -->
+                                <div class="app-row">
+                                    <div class="app-icon" data-app="youtube">
+                                        <div class="icon youtube-icon"></div>
+                                        <span class="app-label">YouTube</span>
+                                    </div>
+                                    <div class="app-icon" data-app="stocks">
+                                        <div class="icon stocks-icon"></div>
+                                        <span class="app-label">Stocks</span>
+                                    </div>
+                                    <div class="app-icon" data-app="maps">
+                                        <div class="icon maps-icon"></div>
+                                        <span class="app-label">Maps</span>
+                                    </div>
+                                    <div class="app-icon" data-app="weather">
+                                        <div class="icon weather-icon"></div>
+                                        <span class="app-label">Weather</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Row 3 -->
+                                <div class="app-row">
+                                    <div class="app-icon" data-app="notes">
+                                        <div class="icon notes-icon"></div>
+                                        <span class="app-label">Notes</span>
+                                    </div>
+                                    <div class="app-icon" data-app="reminders">
+                                        <div class="icon reminders-icon"></div>
+                                        <span class="app-label">Reminders</span>
+                                    </div>
+                                    <div class="app-icon" data-app="clock">
+                                        <div class="icon clock-icon"></div>
+                                        <span class="app-label">Clock</span>
+                                    </div>
+                                    <div class="app-icon" data-app="game-center">
+                                        <div class="icon game-center-icon"></div>
+                                        <span class="app-label">Game Center</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Row 4 -->
+                                <div class="app-row">
+                                    <div class="app-icon" data-app="newsstand">
+                                        <div class="icon newsstand-icon"></div>
+                                        <span class="app-label">Newsstand</span>
+                                    </div>
+                                    <div class="app-icon" data-app="itunes">
+                                        <div class="icon itunes-icon"></div>
+                                        <span class="app-label">iTunes</span>
+                                    </div>
+                                    <div class="app-icon" data-app="app-store">
+                                        <div class="icon app-store-icon"></div>
+                                        <span class="app-label">App Store</span>
+                                    </div>
+                                    <div class="app-icon" data-app="settings">
+                                        <div class="icon settings-icon"></div>
+                                        <span class="app-label">Settings</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Page Indicators -->
+                            <div class="page-indicators">
+                                <div class="dot active"></div>
+                                <div class="dot"></div>
+                            </div>
+                            
+                            <!-- Dock -->
+                            <div class="dock">
+                                <div class="app-icon" data-app="phone">
+                                    <div class="icon phone-icon"></div>
+                                    <span class="app-label">Phone</span>
+                                </div>
+                                <div class="app-icon" data-app="mail">
+                                    <div class="icon mail-icon"></div>
+                                    <span class="app-label">Mail</span>
+                                </div>
+                                <div class="app-icon" data-app="safari">
+                                    <div class="icon safari-icon"></div>
+                                    <span class="app-label">Safari</span>
+                                </div>
+                                <div class="app-icon" data-app="music">
+                                    <div class="icon music-icon"></div>
+                                    <span class="app-label">Music</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- App Screens (will be loaded dynamically) -->
+                        <div class="app-screen" id="app-screen" style="display: none;">
+                            <!-- Dynamic app content will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Home Button -->
+                <div class="home-button" id="home-button"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="apple-logo">🍎</div>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/apps.js"></script>
+</body>
+</html>
