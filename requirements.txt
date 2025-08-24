@@ -1,4 +1,3 @@
-# Add your project dependencies here
-# Example:
-# requests>=2.28.0
-# numpy>=1.21.0
+# Python web server for Original iPhone UI
+# This project uses only Python standard library modules
+# No additional dependencies required

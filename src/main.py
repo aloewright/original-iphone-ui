@@ -22,17 +22,18 @@ def main():
     os.chdir(web_dir)
     
     # Set up the server
-    PORT = 8000
+    PORT = int(os.environ.get("PORT", 8000))
+    HOST = "0.0.0.0"  # Bind to all interfaces for Railway deployment
     Handler = http.server.SimpleHTTPRequestHandler
     
     print(f"🍎 Starting Original iPhone UI Server...")
-    print(f"📱 Server running at: http://localhost:{PORT}")
+    print(f"📱 Server running at: http://{HOST}:{PORT}")
     print(f"📁 Serving files from: {web_dir}")
     print(f"🚀 Open your browser and navigate to the URL above!")
     print(f"🛑 Press Ctrl+C to stop the server\n")
     
     try:
-        with socketserver.TCPServer(("", PORT), Handler) as httpd:
+        with socketserver.TCPServer((HOST, PORT), Handler) as httpd:
             httpd.serve_forever()
     except KeyboardInterrupt:
         print("\n👋 Server stopped. Thanks for using the Original iPhone UI!")
